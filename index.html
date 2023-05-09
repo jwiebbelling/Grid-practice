@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid Practice</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 6fr 30fr 15fr 15fr 5fr;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "Header Menu Menu Menu Menu"
+                "Hero Hero Hero Hero Hero"
+                "Main Main Blank Image Image"
+                "Main Main Blank Extra Extra"
+                "Banner Banner Banner Banner Banner";
+        }
+
+        .Hero {
+            grid-area: Hero;
+            padding: 20vh;
+            background-color: aliceblue;
+        }
+
+        .Main {
+            grid-area: Main;
+            background-color:rgb(186, 197, 239);
+        }
+
+        .Header {
+            grid-area: Header;
+            background-color:rgb(0, 0, 0);
+
+        }
+
+        .Image {
+            grid-area: Image;
+            background-image: url(https://www.10wallpaper.com/wallpaper/1366x768/1201/will_ferrell_as_megamind-Cartoon_animation_film_Selected_Wallpaper_1366x768.jpg);        
+            background-size: cover;
+        }
+
+        .Extra {
+            grid-area: Extra;
+            background-color:rgb(20, 24, 80);
+        }
+
+        .Banner {
+            grid-area: Banner;
+            background-color:rgb(151, 220, 240);
+
+        }
+
+        .Blank {
+            grid-area: Blank;
+        }
+
+        .Menu {
+            grid-area: Menu;
+            background-color:rgb(188, 69, 188);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="Hero"></div>
+        <div class="Main"></div>
+        <div class="Header"></div>
+        <div class="Image"></div>
+        <div class="Extra"></div>
+        <div class="Banner"></div>
+        <div class="Blank"></div>
+        <div class="Menu"></div>
+    </div>
+</body>
+
+</html>
